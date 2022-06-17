@@ -19,4 +19,13 @@ window.addEventListener('scroll',function(){
     rocks.style.top = value * -0.12 + 'px';
     forest.style.top = value * 0.25 + 'px';
     header.style.top = value * 0.5 + 'px';
-})
+});
+
+const tabsContainer = document.querySelector(".gauche");
+
+tabsContainer.addEventListener("click", (e)=>{
+    if(e.target.classList.contains("header") && !e.target.classList.contains("active")){
+        tabsContainer.querySelector(".active").classList.remove("active");
+        e.target.classList.add("active");
+    }
+});
